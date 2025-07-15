@@ -1,0 +1,6 @@
+[console_scripts]
+destination_controller = flowbit_nav.destination_controller:main
+flowbit_nav = flowbit_nav.flowbit_nav:main
+goal_pose_pub = flowbit_nav.goal_pose_pub:main
+initialpose_pub = flowbit_nav.initialpose_pub:main
+robot_server = flowbit_nav.robot_server:main

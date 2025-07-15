@@ -1,0 +1,19 @@
+[2.300s] Invoking command in '/home/jetson/flowbit/build/flowbit_nav': PYTHONPATH=/home/jetson/flowbit/build/flowbit_nav/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/flowbit/install/flowbit_nav/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jetson/flowbit/build/flowbit_nav/build --no-deps symlink_data
+[2.727s] /home/jetson/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:270: UserWarning: Unknown distribution option: 'tests_require'
+[2.727s]   warnings.warn(msg)
+[3.256s] running develop
+[3.954s] running egg_info
+[4.008s] writing flowbit_nav.egg-info/PKG-INFO
+[4.009s] writing dependency_links to flowbit_nav.egg-info/dependency_links.txt
+[4.009s] writing entry points to flowbit_nav.egg-info/entry_points.txt
+[4.010s] writing requirements to flowbit_nav.egg-info/requires.txt
+[4.010s] writing top-level names to flowbit_nav.egg-info/top_level.txt
+[4.117s] reading manifest file 'flowbit_nav.egg-info/SOURCES.txt'
+[4.120s] writing manifest file 'flowbit_nav.egg-info/SOURCES.txt'
+[4.175s] running build_ext
+[4.176s] Creating /home/jetson/flowbit/install/flowbit_nav/lib/python3.10/site-packages/flowbit-nav.egg-link (link to .)
+[4.178s] Installing flowbit_nav script to /home/jetson/flowbit/install/flowbit_nav/lib/flowbit_nav
+[4.179s] 
+[4.179s] Installed /home/jetson/flowbit/build/flowbit_nav
+[4.179s] running symlink_data
+[4.297s] Invoked command in '/home/jetson/flowbit/build/flowbit_nav' returned '0': PYTHONPATH=/home/jetson/flowbit/build/flowbit_nav/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/flowbit/install/flowbit_nav/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jetson/flowbit/build/flowbit_nav/build --no-deps symlink_data

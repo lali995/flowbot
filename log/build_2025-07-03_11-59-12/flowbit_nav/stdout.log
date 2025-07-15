@@ -1,0 +1,20 @@
+running develop
+running egg_info
+creating flowbit_nav.egg-info
+writing flowbit_nav.egg-info/PKG-INFO
+writing dependency_links to flowbit_nav.egg-info/dependency_links.txt
+writing entry points to flowbit_nav.egg-info/entry_points.txt
+writing requirements to flowbit_nav.egg-info/requires.txt
+writing top-level names to flowbit_nav.egg-info/top_level.txt
+writing manifest file 'flowbit_nav.egg-info/SOURCES.txt'
+reading manifest file 'flowbit_nav.egg-info/SOURCES.txt'
+writing manifest file 'flowbit_nav.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/jetson/flowbit/install/flowbit_nav/lib/python3.10/site-packages/flowbit-nav.egg-link (link to .)
+Installing flowbit_nav script to /home/jetson/flowbit/install/flowbit_nav/lib/flowbit_nav
+
+Installed /home/jetson/flowbit/build/flowbit_nav
+running symlink_data
+creating /home/jetson/flowbit/install/flowbit_nav/share/ament_index/resource_index/packages
+symbolically linking /home/jetson/flowbit/build/flowbit_nav/resource/flowbit_nav -> /home/jetson/flowbit/install/flowbit_nav/share/ament_index/resource_index/packages
+symbolically linking /home/jetson/flowbit/build/flowbit_nav/package.xml -> /home/jetson/flowbit/install/flowbit_nav/share/flowbit_nav
