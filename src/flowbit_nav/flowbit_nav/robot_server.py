@@ -26,6 +26,7 @@ import threading
 from typing import Any, Dict, Tuple
 
 from flask import Flask, jsonify, request
+from flask_cors import CORS  
 import rclpy
 from geometry_msgs.msg import Twist
 from rclpy.node import Node
@@ -99,6 +100,7 @@ class DestinationController(Node):
 # Flask app (runs in the *main* thread)
 # ─────────────────────────────────────────────────────────────────────────────
 app = Flask(__name__)
+CORS(app)
 controller: DestinationController | None = None  # populated in main()
 
 

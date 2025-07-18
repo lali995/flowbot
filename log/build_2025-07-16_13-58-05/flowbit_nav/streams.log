@@ -1,0 +1,23 @@
+[2.331s] Invoking command in '/home/jetson/flowbit/build/flowbit_nav': PYTHONPATH=/home/jetson/flowbit/build/flowbit_nav/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/flowbit/install/flowbit_nav/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jetson/flowbit/build/flowbit_nav/build --no-deps symlink_data
+[2.744s] /home/jetson/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:270: UserWarning: Unknown distribution option: 'tests_require'
+[2.744s]   warnings.warn(msg)
+[3.275s] running develop
+[3.975s] running egg_info
+[4.028s] writing flowbit_nav.egg-info/PKG-INFO
+[4.030s] writing dependency_links to flowbit_nav.egg-info/dependency_links.txt
+[4.030s] writing entry points to flowbit_nav.egg-info/entry_points.txt
+[4.030s] writing requirements to flowbit_nav.egg-info/requires.txt
+[4.030s] writing top-level names to flowbit_nav.egg-info/top_level.txt
+[4.140s] reading manifest file 'flowbit_nav.egg-info/SOURCES.txt'
+[4.142s] writing manifest file 'flowbit_nav.egg-info/SOURCES.txt'
+[4.201s] running build_ext
+[4.203s] Creating /home/jetson/flowbit/install/flowbit_nav/lib/python3.10/site-packages/flowbit-nav.egg-link (link to .)
+[4.205s] Installing destination_controller script to /home/jetson/flowbit/install/flowbit_nav/lib/flowbit_nav
+[4.206s] Installing flowbit_nav script to /home/jetson/flowbit/install/flowbit_nav/lib/flowbit_nav
+[4.208s] Installing goal_pose_pub script to /home/jetson/flowbit/install/flowbit_nav/lib/flowbit_nav
+[4.208s] Installing initialpose_pub script to /home/jetson/flowbit/install/flowbit_nav/lib/flowbit_nav
+[4.208s] Installing robot_server script to /home/jetson/flowbit/install/flowbit_nav/lib/flowbit_nav
+[4.209s] 
+[4.212s] Installed /home/jetson/flowbit/build/flowbit_nav
+[4.212s] running symlink_data
+[4.338s] Invoked command in '/home/jetson/flowbit/build/flowbit_nav' returned '0': PYTHONPATH=/home/jetson/flowbit/build/flowbit_nav/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetson/flowbit/install/flowbit_nav/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jetson/flowbit/build/flowbit_nav/build --no-deps symlink_data

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Navigation</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #1a1a1a;
+            color: #00FF00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+        }
+
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #222;
+            border: 2px solid #00FF00;
+            color: #00FF00;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00FF00;
+            border: none;
+            color: black;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #009900;
+        }
+
+        .message {
+            color: #FF4500;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Flow-bot</h1>
+        <p>Enter the destination for the robot:</p>
+        <input type="text" id="destination" placeholder="e.g., Go to the fridge">
+        <button onclick="sendDestination()">Send Location</button>
+        <p class="message" id="message"></p>
+    </div>
+
+    <script>
+        function sendDestination() {
+            destination = document.getElementById('destination').value.trim();
+            destination = destination.replace(/^Go to the\s+/i, '').trim();
+
+            if (destination) {
+                const coordinates = getCoordinates(destination);
+                if (coordinates) {
+                    // Replace with your robot's IP address and port
+                    fetch('http://192.168.50.104:5000/goal', {  // Replace <robot-ip> with your robot's IP
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(coordinates)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('message').textContent = 'Destination sent successfully!';
+                    })
+                    .catch(error => {
+                        document.getElementById('message').textContent = 'Error sending destination.';
+                    });
+                } else {
+                    document.getElementById('message').textContent = 'Unknown destination.';
+                }
+            } else {
+                document.getElementById('message').textContent = 'Please enter a destination.';
+            }
+        }
+
+        function getCoordinates(destination) {
+            const dictionary = {
+
+                'fridge': {x: -4.01952, y: 0.0, z: -1.50533, yaw: 1.57},
+                'water cooler': {x: -3.1, y: 0.0, z: 0.54056, yaw: 1.57},
+                'server': {x: -0.716533, y: 0.0, z: -1.45803, yaw: 1.57},
+                'home': {x: 2.5, y: 0.0117438, z: 1.1187, yaw: 1.57},
+            };
+
+            // Extract the last word from the sentence as the destination name
+            const words = destination.split(" ");
+            const lastWord = words[words.length - 1].toLowerCase();
+            return dictionary[lastWord] || null;
+        }
+    </script>
+</body>
+</html>
